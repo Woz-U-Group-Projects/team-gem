@@ -1,6 +1,7 @@
-<h1>Editing Shopping List</h1>
-
+<h1 class="shopping_list_title">Editing Shopping List</h1>
+<div class="forms">
 <%= render 'form', shopping_list: @shopping_list %>
-
-<%= link_to 'Show', @shopping_list %> |
-<%= link_to 'Back', shopping_lists_path %>
+</div>
+<div class="links">
+<%= link_to 'Cancel', shopping_lists_path %>
+</div>

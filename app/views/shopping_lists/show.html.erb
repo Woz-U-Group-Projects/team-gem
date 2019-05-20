@@ -1,17 +1,14 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <strong>Title:</strong>
-  <%= @shopping_list.title %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @shopping_list.description %>
-</p>
+<h2 class="shopping_list_title"><%= @shopping_list.title %></h2>
+<p class="shopping_list_sub_title"><%= @shopping_list.description %></p>
 <div id="shopping_items_wrapper">
  <%= render @shopping_list.shopping_items %>
  <div id="form">
   <%= render "shopping_items/form" %>
  </div>
 </div>
-<%= link_to 'Edit', edit_shopping_list_path(@shopping_list) %> |
-<%= link_to 'Back', shopping_lists_path %>
+<div class="links">
+ <%= link_to 'Edit', edit_shopping_list_path(@shopping_list) %> |
+ <%= link_to 'Delete', shopping_list_path(@shopping_list), method: :delete, data: { confirm: "Are you sure?" } %> |
+ <%= link_to 'Back', shopping_lists_path %>
+</div>

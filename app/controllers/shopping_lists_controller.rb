@@ -56,7 +56,7 @@ class ShoppingListsController < ApplicationController
   def destroy
     @shopping_list.destroy
     respond_to do |format|
-      format.html { redirect_to shopping_lists_url, notice: 'Shopping list was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Shopping list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
