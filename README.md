@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version  2.6.3p62 (2019-04-16 revision 67580) [i386-mingw32]
 
-Things you may want to cover:
+* Ruby ob Rails version 5.0.7.2
 
-* Ruby version
+* Clone the repo
+  git clone https://github.com/Woz-U-Group-Projects/team-gem.git
 
-* System dependencies
+* Run bundle install
 
-* Configuration
+* Start the rails server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Navigate to localhost:3000
