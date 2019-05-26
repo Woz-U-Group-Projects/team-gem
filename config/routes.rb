@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :shopping_lists do
     resources :shopping_items do
       member do
