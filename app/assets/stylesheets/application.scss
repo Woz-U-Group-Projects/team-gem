@@ -86,10 +86,6 @@ li {
   list-style:none;
 }
 
-p {
-  font-weight: bold;
-}
-
 p.notice {
   text-align: center;
 }
@@ -133,7 +129,7 @@ p.notice {
         margin: 0;
         padding: 1em;
         color: $dark;
-        font-weight: 100;
+        font-weight: bold;
       }
     }
 
