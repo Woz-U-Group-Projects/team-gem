@@ -17,7 +17,7 @@ class ShoppingListsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create shopping_list" do
     assert_difference('ShoppingList.count') do
-      post shopping_lists_url, params: { shopping_list: { description: @shopping_list.description, title: @shopping_list.title } }
+      post shopping_lists_url, params: {shopping_list: {description: @shopping_list.description, title: @shopping_list.title}}
     end
 
     assert_redirected_to shopping_list_url(ShoppingList.last)
@@ -34,7 +34,7 @@ class ShoppingListsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update shopping_list" do
-    patch shopping_list_url(@shopping_list), params: { shopping_list: { description: @shopping_list.description, title: @shopping_list.title } }
+    patch shopping_list_url(@shopping_list), params: {shopping_list: {description: @shopping_list.description, title: @shopping_list.title}}
     assert_redirected_to shopping_list_url(@shopping_list)
   end
 

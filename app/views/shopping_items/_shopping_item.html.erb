@@ -1,31 +1,31 @@
 <div class="row clearfix">
- <% if shopping_item.purchased? %>
-  <div class="purchased">
-   <%= link_to purchased_shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :patch do %>
-    <i style="opacity: 0.4;" class="fa fa-check"></i>
-   <% end %>
-  </div>
-  <div class="shopping_item">
-   <p style="opacity: 0.4;"><strike><%= shopping_item.content %></strike></p>
-  </div>
-  <div class="trash">
-   <%= link_to shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <i class="fa fa-trash"></i>
-   <% end %>
-  </div>
- <% else %>
-  <div class="purchased">
-   <%= link_to purchased_shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :patch do %>
-    <i class="fa fa-circle-thin"></i>
-   <% end %>
-  </div>
-  <div class="shopping_item">
-   <p><%= shopping_item.content %> | QTY: <%= shopping_item.quantity %></p>
-  </div>
-  <div class="trash">
-   <%= link_to shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <i class="fa fa-trash"></i>
-   <% end %>
-  </div>
- <% end %>
+	<% if shopping_item.purchased? %>
+		<div class="purchased">
+			<%= link_to purchased_shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :patch do %>
+				<i style="opacity: 0.4;" class="fa fa-check"></i>
+			<% end %>
+		</div>
+		<div class="shopping_item">
+			<p style="opacity: 0.4;"><strike><%= shopping_item.content %></strike></p>
+		</div>
+		<div class="trash">
+			<%= link_to shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+				<i class="fa fa-trash"></i>
+			<% end %>
+		</div>
+	<% else %>
+		<div class="purchased">
+			<%= link_to purchased_shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :patch do %>
+				<i class="fa fa-circle-thin"></i>
+			<% end %>
+		</div>
+		<div class="shopping_item">
+			<p><%= shopping_item.content %> | QTY: <%= shopping_item.quantity %></p>
+		</div>
+		<div class="trash">
+			<%= link_to shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+				<i class="fa fa-trash"></i>
+			<% end %>
+		</div>
+	<% end %>
 </div>
