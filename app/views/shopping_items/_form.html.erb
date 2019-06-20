@@ -1,4 +1,8 @@
 <%= form_for([@shopping_list, @shopping_list.shopping_items.build]) do |f| %>
-<%= f.text_field :content, placeholder: "New Item" %>
-	<%= f.submit "Add Item" %>
+	<%= f.text_field :content, placeholder: "New Item" %><br>
+	<%= f.label :quantity %>
+	<%= f.number_field :quantity, {min:0, max:100} %><br>
+	<p>
+		<%= f.submit "Add Item" %>
+	</p>
 <% end %>

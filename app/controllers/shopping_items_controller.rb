@@ -32,7 +32,7 @@ class ShoppingItemsController < ApplicationController
   end
 
   def shopping_item_params
-    params[:shopping_item].permit(:content)
+    params[:shopping_item].permit(:content, :quantity)
   end
 
 end

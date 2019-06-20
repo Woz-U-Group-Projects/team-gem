@@ -6,7 +6,7 @@
 			<% end %>
 		</div>
 		<div class="shopping_item">
-			<p style="opacity: 0.4;"><strike><%= shopping_item.content %></strike></p>
+			<p style="opacity: 0.4;"><strike><%= shopping_item.content %> | QTY: <%= shopping_item.quantity %></strike></p>
 		</div>
 		<div class="trash">
 			<%= link_to shopping_list_shopping_item_path(@shopping_list, shopping_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
