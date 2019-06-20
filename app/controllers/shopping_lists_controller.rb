@@ -70,6 +70,6 @@ class ShoppingListsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def shopping_list_params
-    params.require(:shopping_list).permit(:title, :description)
+    params.require(:shopping_list).permit(:title, :description, :dueDate)
   end
 end
